@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// This class gives all the information of the enemys.
+/// </summary>
 public class Enemy : MonoBehaviour, IEnemyBehaviour
 {
     public Player player;
@@ -27,11 +29,10 @@ public class Enemy : MonoBehaviour, IEnemyBehaviour
         {
             active = !active;
             Time.timeScale = (active) ? 0 : 1f;
-            //player.GetComponent<Player>().enabled = false;
-            //Destroy(collision.gameObject);
         }
     }
 
+    //Choose one of those types of actions.
     void StartMoving()
     {
         switch (info.behavior)
@@ -47,6 +48,7 @@ public class Enemy : MonoBehaviour, IEnemyBehaviour
         }
     }
 
+    //Sets the enemy movement.
     public void EnemyMovement()
     {
 
@@ -96,6 +98,7 @@ public class Enemy : MonoBehaviour, IEnemyBehaviour
         }
     }
 
+    //Calls the start moving method every two seconds to change the enemy behaviour.
     public IEnumerator Behaviour()
     {
         yield return new WaitForSeconds(2);
@@ -114,6 +117,7 @@ public interface IEnemyBehaviour
     void EnemyMovement();
 }
 
+//Gives parameters to our enemys.
 public struct Parameters
 {
     public EnemyBehavior behavior;

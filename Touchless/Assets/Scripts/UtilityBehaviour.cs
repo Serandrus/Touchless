@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// This class is used to reload the scene attached to it.
+/// </summary>
 public class UtilityBehaviour : MonoBehaviour
 {
 

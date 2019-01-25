@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// This class spawns all the enemys in the game.
+/// </summary>
 public class MobSpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;

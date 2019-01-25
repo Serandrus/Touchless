@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// This class sets all the rooms that are used to create the map.
+/// </summary>
 public class RoomTemplates : MonoBehaviour
 {
     public GameObject[] bottomRooms;
@@ -17,6 +19,9 @@ public class RoomTemplates : MonoBehaviour
     private bool spawnedFinalRoom;
     public GameObject finalElement;
 
+    /// <summary>
+    /// Spawns the win item.
+    /// </summary>
     void Update()
     {
         if (waitTime <= 0 && spawnedFinalRoom == false)

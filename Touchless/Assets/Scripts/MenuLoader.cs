@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// This class charges the menu scene after splash screen.
+/// </summary>
 public class MenuLoader : MonoBehaviour
 {
 

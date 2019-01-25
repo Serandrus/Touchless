@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Like his name says this class is going to spawn all rooms.
+/// </summary>
 public class RoomSpawner : MonoBehaviour
 {
     public int openingDirection;
@@ -56,7 +58,8 @@ public class RoomSpawner : MonoBehaviour
             spawned = true;
         }
     }
-
+    
+    //Spawns a closed room just in case that 2 rooms are spawned and there is a hole btwn them.
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("SpawnPoint"))

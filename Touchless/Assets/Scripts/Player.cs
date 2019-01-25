@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// This class sets all the components of the player.
+/// </summary>
 public class Player : MonoBehaviour
 {
     float speed;
@@ -12,6 +14,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         gameOverText.SetActive(false);
         youWinText.SetActive(false);
         speed = 200f;
@@ -29,17 +32,20 @@ public class Player : MonoBehaviour
 
         rb.velocity = new Vector3(inputX, inputY, 0);
 	}
-
+    
+    //Sets the wining and losing conditions.
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<Enemy>())
         {
             gameOverText.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
         }
 
         if (collision.gameObject.GetComponent<WinObject>())
         {
             youWinText.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// This class gives the info to main menu.
+/// </summary>
 public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
